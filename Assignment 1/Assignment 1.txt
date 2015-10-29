@@ -1,0 +1,10 @@
+find ~ -name deleteme.tar | xargs tar -xvf | xargs rm -f
+
+wget -v -x -r -t 10 --ftp-user=anonymous --ftp-password=jainash@iupui.edu ftp://ftp.ncbi.nih.gov/genbank/genomes/Bacteria
+
+ftp
+open ftp.ncbi.nlm.nih.gov
+echo anonymous
+echo jainash@iupui.edu
+cd /genbank/genomes/Bacteria
+get *
